@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Jul 22 11:33:36 EDT 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0147-5eb4-d8ff-00001b84f130 
+on database directory /cac/u01/xw205/EMR/metastore_db with class loader sun.misc.Launcher$AppClassLoader@5561bfa3 
+Loaded from file:/cac/dc/apache-hive-0.13.1-bin/lib/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_60-b19
+user.dir=/cac/u01/xw205/EMR
+os.name=Linux
+os.arch=amd64
+os.version=2.6.32-431.11.2.el6.x86_64
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

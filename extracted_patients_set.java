@@ -2,6 +2,12 @@
 Date: July, 27, 2014
 In this file, it process /emerald/xw205/paitent_after_2001_output.txt(observation_f_after_2001) and problem_after_2001_output.txt (problem_f_after_2001_tmp table). It will generate a file contains the patient interset list. 
 The output file is patient_interset.csv
+
+Result:
+patient num in observation_f_after_2001 is: 30406867
+patient num in problem_after_2001 is: 31162609
+The interSet num is: 29013106
+
 */
 import java.io.IOException;
 import java.sql.PreparedStatement;

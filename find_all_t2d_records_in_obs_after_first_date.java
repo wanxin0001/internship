@@ -1,8 +1,10 @@
 /*
-Date: July 27th, 2014
-In this file, it process /emerald/xw205/paitents_after_2001_output.txt and /cac/u01/xw205/age.csv and t2d_patient_set_by_icd.csv.
-The purpose of this file is to get all observation records after the first date that the patients find T2D. It also gives the specific num of days after the first date and transfer age_key to age.
-The output file is obs_for_T2D_before_first_date.csv 
+	Copyright 2014 (C) Optimal Solution Inc 
+ 	Created on : July 27, 2014
+ 	Author     : Xin Wan
+	In this file, it process /emerald/xw205/paitents_after_2001_output.txt and /cac/u01/xw205/age.csv and t2d_patient_set_by_icd.csv.
+	The purpose of this file is to get all observation records after the first date that the patients find T2D. It also gives the specific num of days after the first date and transfer age_key to age.
+	The output file is obs_for_T2D_before_first_date.csv 
 */
 
 import java.io.IOException;

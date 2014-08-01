@@ -1,0 +1,351 @@
+show tables;
+exit
+;
+show tables;
+exit
+;
+show tables;
+exit
+dfew
+;
+set hive.metastore.warehouse.dir=/user/hive/warehouse
+;
+exit
+;
+show tables;
+set hive.metastore.warehouse.dir=/user/hive/warehouse
+;
+show tables;
+set hive.metastore.warehouse.dir=/user/hive/warehouse;
+show tables;
+exit
+;
+show database;
+show tables;
+exit
+;
+SET hive.metastore.warehouse.dir=/user/hive/
+;
+show tables;
+exit
+;
+SET hive.metastore.warehouse.dir=/user/hive/warehouse;
+show tables;
+create test (id int);
+create table test (id int);
+show tables;
+exit
+;
+select * from test limit 10;
+select * from observation_f limit 10;
+show tables;
+exit
+;
+show tables
+;
+exit
+;
+exit
+;
+create internal table test2(string name) location '/user/hive/warehouse/toster';
+create  table test2(string name) location '/user/hive/warehouse/toster';
+create  table test2(name string) location '/user/hive/warehouse/toster';
+select * from test2 limit 20;
+create  table test2(name string) location '/user/hive/warehouse/observation_f_test';
+create  table test3(name string) location '/user/hive/warehouse/observation_f_test';
+select * from test3 limit 20;
+create  table test3(name string) location '/user/hive/warehouse/observation_f_test111';
+create  table test4(name string) location '/user/hive/warehouse/observation_f_test111';
+exit
+;
+create table poker (name string);
+select * from poker limit 10;
+show table;s
+;
+show tables;
+create table pokes (name string);
+select * from pokes limit 10;
+select * from pokes ;
+show tables;
+exit;
+eixt
+;
+exit;
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+select * from observation_f_all_after_2001
+dfs;
+select * from observation_f_all_after_2001 limit 20;
+select * from observation_f_all_after_2001;
+select * from poker;
+select * from pokes;
+show tables;
+cd 
+;
+exit;
+show tables;
+exit;
+show tables;
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+select * from observation_f_all_after_2001 limit 20;
+show tables;
+select * from poker limit 20;
+select * from pokes limit 20;
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+;
+ls
+;
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FOR
+;
+select * from observation_f_all_after_2001;
+exit
+;
+ls
+;
+show tables'
+;
+show tables;
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FOR;
+CREATE TABLE IF NOT EXISTS `BUCKETING_COLS` (
+  `SD_ID` bigint(20) NOT NULL,
+  `BUCKET_COL_NAME` varchar(256) CHARACTER SET latin1 COLLATE latin1_bin DEFAULT NULL,
+  `INTEGER_IDX` int(11) NOT NULL,
+  PRIMARY KEY (`SD_ID`,`INTEGER_IDX`),
+  KEY `BUCKETING_COLS_N49` (`SD_ID`),
+  CONSTRAINT `BUCKETING_COLS_FK1` FOREIGN KEY (`SD_ID`) REFERENCES `SDS` (`SD_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `BUCKETING_COLS` (
+  `SD_ID` bigint(20) NOT NULL,
+  `BUCKET_COL_NAME` varchar(256) CHARACTER SET latin1 COLLATE latin1_bin DEFAULT NULL,
+  `INTEGER_IDX` int(11) NOT NULL,
+  PRIMARY KEY (`SD_ID`,`INTEGER_IDX`),
+  KEY `BUCKETING_COLS_N49` (`SD_ID`),
+  CONSTRAINT `BUCKETING_COLS_FK1` FOREIGN KEY (`SD_ID`) REFERENCES `SDS` (`SD_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE OBSERVATION_F (STUDY_KEY INT, OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBSERVATION_KEY INT, VALUE_QUALITY_INDICATOR STRING, OBS_VALUE DOUBLE, CREATE_DATE STRING, OBS_DATE STRING, LOW_NORMAL INT, HIGH_NORMAL INT, ACTIVITY_TRACER_ID BIGINT, AGE_KEY INT) Row FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+SELECT * FROM OBSERVATION_F LIMIT 10;
+few;
+CREATE TABLE OBSERVATION_F_ALL_tmp (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBSERVATION_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) Row FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+select * from observation_f_all_tmp;
+show tables;
+drop observation_f_all_after_2001
+;
+drop table  observation_f_all_after_2001
+;
+set hive.exec.max.created.files=150000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set io.sort.mb=10;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+set hive.exec.reducers.bytes.per.reducer=500000000; 
+INSERT OVERWRITE TABLE observation_f_all_after_2001 PARTITION (OBSERVATION_KEY) SELECT OBS_TRACER_ID, PATIENT_KEY, OBS_VALUE, OBS_DATE, AGE_KEY, OBSERVATION_KEY FROM OBSERVATION_F_ALL_TMP WHERE OBS_VALUE IS NOT NULL;    
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+set hive.exec.max.created.files=150000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set io.sort.mb=10;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+set hive.exec.reducers.bytes.per.reducer=500000000; 
+INSERT OVERWRITE TABLE observation_f_all_after_2001 PARTITION (OBSERVATION_KEY) SELECT OBS_TRACER_ID, PATIENT_KEY, OBS_VALUE, OBS_DATE, AGE_KEY, OBSERVATION_KEY FROM OBSERVATION_F_ALL_TMP WHERE OBS_VALUE IS NOT NULL;    
+INSERT OVERWRITE LOCAL DIRECTORY '/cac/u01/xw205/obs_patients' select patient_key FROM observation_f_all_tmp;
+set hive.exec.max.created.files=150000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set io.sort.mb=10;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+set hive.exec.reducers.bytes.per.reducer=500000000; 
+INSERT OVERWRITE TABLE observation_f_all_after_2001 PARTITION (OBSERVATION_KEY) SELECT OBS_TRACER_ID, PATIENT_KEY, OBS_VALUE, OBS_DATE, AGE_KEY, OBSERVATION_KEY FROM OBSERVATION_F_ALL_TMP WHERE OBS_VALUE IS NOT NULL;  
+show tables;
+select * from observation_f_all_after_2001 limit 20;
+show tables;
+select * from observation_f_all_after_2001;
+exit
+;
+create test11 (dd int);
+create table  test11 (dd int);
+show tables
+;
+exit
+;
+drop table *;
+show tables;
+drop table  observation_f, test4;
+drop table  observation_f;
+drop table  observation_f_all_after_2001;
+drop table  observation_f_all_tmp;
+drop table  poker;
+drop table  pokes;
+drop table  test;
+drop table  test11;
+drop table  test2;
+drop table  test3;
+drop table  test4;
+show tables;
+select * from tab_name;
+exit;
+CREATE TABLE OBSERVATION_F_ALL_tmp (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBSERVATION_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) Row FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+load data INPATH "/xw205/paitents_after_2001_output.txt" OVERWRITE INTO TABLE OBSERVATION_F_ALL_tmp;
+select * from observation_f_all_tmp limit 20;
+CREATE TABLE OBSERVATION_F_ALL_AFTER_2001 (OBS_TRACER_ID BIGINT, PATIENT_KEY INT, OBS_VALUE DOUBLE, OBS_DATE STRING, AGE_KEY INT) partitioned by (OBSERVATION_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (OBS_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+exit;
+show tables;
+describe problem_d
+;
+select * from problem_f limit 20;
+show problem_f;
+describe problem_f;
+CREATE TABLE PROBLEM_F_AFTER_2001 (
+PROBLEM_TRACER_ID BIGINT,
+PATIENT_KEY INT,
+PROBLEM_KEY INT,
+ONSET_DATE STRING,
+STOP_DATE STRING,
+CHAIN_ID INT,
+CHAIN_SEQ INT,
+AGE_KEY INT,
+STOP REASON STRING,
+ACTIVE_FLAG STRING,
+DX_QUALIFIER STRING,
+PROV_SPECIALTY_KEY INT
+) 
+partitioned by (PROBLEM_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (ONSET_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+CREATE TABLE PROBLEM_F_AFTER_2001 (
+PROBLEM_TRACER_ID BIGINT,
+PATIENT_KEY INT,
+PROBLEM_KEY INT,
+ONSET_DATE STRING,
+STOP_DATE STRING,
+CHAIN_ID INT,
+CHAIN_SEQ INT,
+AGE_KEY INT,
+STOP_REASON STRING,
+ACTIVE_FLAG STRING,
+DX_QUALIFIER STRING,
+PROV_SPECIALTY_KEY INT
+) 
+partitioned by (PROBLEM_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (ONSET_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+CREATE TABLE PROBLEM_F_AFTER_2001 (
+PROBLEM_TRACER_ID BIGINT,
+PATIENT_KEY INT,
+ONSET_DATE STRING,
+STOP_DATE STRING,
+CHAIN_ID INT,
+CHAIN_SEQ INT,
+AGE_KEY INT,
+STOP_REASON STRING,
+ACTIVE_FLAG STRING,
+DX_QUALIFIER STRING,
+PROV_SPECIALTY_KEY INT
+) 
+partitioned by (PROBLEM_KEY INT) CLUSTERED BY(PATIENT_KEY) SORTED BY (ONSET_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+EXIT;
+show tables;
+set hive.exec.max.created.files=300000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+set hive.exec.max.created.files=300000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+INSERT OVERWRITE TABLE problem_f_after_2001 PARTITION (PROBLEM_KEY) SELECT PROBLEM_TRACER_ID, PATIENT_KEY, ONSET_DATE, STOP_DATE, CHAIN_ID, CHAIN_SEQ, AGE_KEY, STOP_REASON, ACTIVE_FLAG, DX_QUALIFIER, PROV_SPECIALTY_KEY, PROBLEM_KEY FROM PROBLEM_F WHERE YEAR(ONSET_DATE) > 2000;  
+exit
+;
+set hive.exec.max.created.files=300000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+INSERT OVERWRITE TABLE problem_f_after_2001 PARTITION (PROBLEM_KEY) SELECT PROBLEM_TRACER_ID, PATIENT_KEY, ONSET_DATE, STOP_DATE, CHAIN_ID, CHAIN_SEQ, AGE_KEY, STOP_REASON, ACTIVE_FLAG, DX_QUALIFIER, PROV_SPECIALTY_KEY, PROBLEM_KEY FROM PROBLEM_F WHERE YEAR(ONSET_DATE) > 2000;  
+set hive.exec.max.created.files=500000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+set hive.exec.reducers.bytes.per.reducer=1000000000; 
+INSERT OVERWRITE TABLE problem_f_after_2001 PARTITION (PROBLEM_KEY) SELECT PROBLEM_TRACER_ID, PATIENT_KEY, ONSET_DATE, STOP_DATE, CHAIN_ID, CHAIN_SEQ, AGE_KEY, STOP_REASON, ACTIVE_FLAG, DX_QUALIFIER, PROV_SPECIALTY_KEY, PROBLEM_KEY FROM PROBLEM_F WHERE YEAR(ONSET_DATE) > 2000;  
+exit
+;
+show tables
+;
+exit
+;
+exit;
+show tables;
+describe problem_f_after_2001;
+exit;
+show tables;
+select * from problem_f_after_2001;
+exit
+;
+CREATE TABLE PROBLEM_F_AFTER_2001_tmp (
+PROBLEM_TRACER_ID BIGINT,
+PATIENT_KEY INT,
+ONSET_DATE STRING,
+STOP_DATE STRING,
+CHAIN_ID INT,
+CHAIN_SEQ INT,
+AGE_KEY INT,
+STOP_REASON STRING,
+ACTIVE_FLAG STRING,
+DX_QUALIFIER STRING,
+PROV_SPECIALTY_KEY INT,
+PROBLEM_KEY INT
+) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+exit
+;
+show tables;
+select * from problem_f_after_2001_tmp limit 20;
+INSERT OVERWRITE TABLE problem_f_after_2001 PARTITION (PROBLEM_KEY) SELECT PROBLEM_TRACER_ID, PATIENT_KEY, ONSET_DATE, STOP_DATE, CHAIN_ID, CHAIN_SEQ, AGE_KEY, STOP_REASON, ACTIVE_FLAG, DX_QUALIFIER, PROV_SPECIALTY_KEY, PROBLEM_KEY FROM PROBLEM_F_after_2001_tmp;  
+set hive.exec.max.created.files=500000;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+INSERT OVERWRITE TABLE problem_f_after_2001 PARTITION (PROBLEM_KEY) SELECT PROBLEM_TRACER_ID, PATIENT_KEY, ONSET_DATE, STOP_DATE, CHAIN_ID, CHAIN_SEQ, AGE_KEY, STOP_REASON, ACTIVE_FLAG, DX_QUALIFIER, PROV_SPECIALTY_KEY, PROBLEM_KEY FROM PROBLEM_F_after_2001_tmp;  
+select * from PROBLEM_F_AFTER_2001_tmp limit 20;
+exit
+;
+show tables;
+exit
+;
+SHOW TABLES;
+DROP TABLE PROBLEM_F_AFTER_2001;
+CREATE TABLE PROBLEM_F_AFTER_2001 (
+PROBLEM_TRACER_ID BIGINT,
+PATIENT_KEY INT,
+ONSET_DATE STRING,
+STOP_DATE STRING,
+CHAIN_ID INT,
+CHAIN_SEQ INT,
+AGE_KEY INT,
+STOP_REASON STRING,
+ACTIVE_FLAG STRING,
+DX_QUALIFIER STRING,
+PROV_SPECIALTY_KEY INT,
+PROBLEM_KEY INT
+) CLUSTERED BY(PATIENT_KEY) SORTED BY (ONSET_DATE) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+set hive.exec.max.created.files=5000000;
+set mapred.reduce.tasks=200;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.max.dynamic.partitions = 4000;
+set mapred.task.timeout = 3600000;
+set hive.exec.max.dynamic.partitions.pernode = 2000000000;
+set hive.exec.reducers.bytes.per.reducer=1000000000; 
+create table test (id int);
+exit
+;
+create table test (id int);
+exit;
+create table test (id int);
+exit
+;
+create table test (id int);
+exit
+;
+exit;

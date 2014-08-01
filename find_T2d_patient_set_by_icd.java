@@ -1,9 +1,12 @@
 /*
-Date: July, 27, 2014
-In this file, it process /cac/dc/xw205/problem_after_2001_output.txt and ~/T2D_problem_key_by_icd_code.txt and /cac/dc/xw205/patient_interset.csv to get the list of patients who has T2D and find the first date to get t2d. 
-The output file is /cac/dc/xw205/t2d_patient_set_by_icd.csv
-the first col: patient_key;
-the second col: the first date to get T2D
+	Copyright 2014 (C) Optimal Solution Inc 
+ 	Created on : July 27, 2014
+ 	Author     : Xin Wan
+
+	In this file, it process /cac/dc/xw205/problem_after_2001_output.txt and ~/T2D_problem_key_by_icd_code.txt and /cac/dc/xw205/patient_interset.csv to get the list of patients who has T2D and find the first date to get t2d. 
+	The output file is /cac/dc/xw205/t2d_patient_set_by_icd.csv
+	the first col: patient_key;
+	the second col: the first date to get T2D
 */
 import java.io.IOException;
 import java.sql.PreparedStatement;

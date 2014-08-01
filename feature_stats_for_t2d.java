@@ -1,6 +1,16 @@
 /*
-Date: July 27th, 2014
-In this file, it process 
+	Copyright 2014 (C) Optimal Solution Inc 
+ 	Created on : July 27, 2014
+ 	Author     : Xin Wan
+ 	In order to implement my idea, I will first extract the records in different time period. And then I create a matrix. The row represents all T2D patients. The column represents that how many times they measure this feature in this time period. In this way, we get two matrix and give us the observation stats information for two period.
+	
+	One time period is from 2 months before their first date that marked T2D to 2 months after their first date that marked T2D. In this period, all record values will respresent that they are T2D patients.
+	
+	The second time period is from 14 months before their first date that marked T2D to 10 months before their first date marked T2D. In this period, all record values will show the sistuation of these patients one year ago.
+ 	
+ 	The input file is /emerald/xw205/patient_table.csv, /emerald/xw205/feature_table.csv.
+	The output file is /emerald/xw205/features_stats_before_1Y_4M.csv, features_stats_Now_4M.csv
+
 */
 
 import java.io.IOException;

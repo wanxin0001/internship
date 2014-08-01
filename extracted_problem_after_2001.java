@@ -1,6 +1,10 @@
 /*
-Date: July, 24, 2014
-In this file, it process problem_f and extract the records after 2001.
+	Copyright 2014 (C) Optimal Solution Inc 
+ 	Created on : July 24, 2014
+ 	Author     : Xin Wan
+	In this file, it process all records from problem_f table and extract the records after 2001.
+	The input file is: /cac/u01/xw205/problem_f_all/input.txt
+	The output file is: /cac/u01/xw205/problem_f_all/paitents_after_2001_output.txt
 */
 import java.io.IOException;
 import java.sql.PreparedStatement;
